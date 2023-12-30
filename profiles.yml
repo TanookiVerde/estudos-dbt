@@ -1,0 +1,13 @@
+soccer_538:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: estudos-dbt-e-bigquery
+      dataset: dbt_football
+      threads: 4
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      keyfile: "{{ env_var('BIGQUERY_KEYFILE') }}"
