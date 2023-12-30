@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: stg_football_matches
+    description: D1
+
+  - name: stg_football_rankings
+    description: D2

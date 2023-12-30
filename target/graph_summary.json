@@ -1,0 +1,1 @@
+{"_invocation_id": "b39e99da-f1a8-4d2a-a296-745a0cb54335", "linked": {"0": {"name": "model.estudos_dbt.stg_football_rankings", "type": "model", "succ": [2]}, "1": {"name": "model.estudos_dbt.stg_football_matches", "type": "model", "succ": [2]}, "2": {"name": "model.estudos_dbt.mart_football_information", "type": "model"}}}

@@ -1,4 +1,4 @@
-soccer_538:
+football:
   target: dev
   outputs:
     dev:
@@ -10,4 +10,4 @@ soccer_538:
       timeout_seconds: 300
       location: US
       priority: interactive
-      keyfile: "{{ env_var('BIGQUERY_KEYFILE') }}"
+      keyfile: /home/pedromarques/Documentos/Autenticação/BigQuery/estudos-dbt-e-bigquery-390e4a366d25.json
