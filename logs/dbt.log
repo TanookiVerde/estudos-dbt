@@ -2170,3 +2170,372 @@ where team2 is null
 [0m11:59:59.166463 [debug] [MainThread]: Command `dbt test` failed at 11:59:59.166085 after 4.72 seconds
 [0m11:59:59.168076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6879a1c4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6866137f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f68668b9a60>]}
 [0m11:59:59.169089 [debug] [MainThread]: Flushing usage events
+[0m12:04:18.399385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdea22dc4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdea05acaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdea05c9f70>]}
+
+
+============================== 12:04:18.402457 | 404e970d-4919-4259-bc9b-a668fae66797 ==============================
+[0m12:04:18.402457 [info ] [MainThread]: Running with dbt=1.7.4
+[0m12:04:18.403208 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/pedromarques/Documentos/GitHub/estudos-dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/pedromarques/Documentos/GitHub/estudos-dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m12:04:19.572749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '404e970d-4919-4259-bc9b-a668fae66797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8f8b8610>]}
+[0m12:04:19.767015 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '404e970d-4919-4259-bc9b-a668fae66797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8f1b80a0>]}
+[0m12:04:19.767956 [info ] [MainThread]: Registered adapter: bigquery=1.7.2
+[0m12:04:19.778328 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m12:04:19.834713 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m12:04:19.835921 [debug] [MainThread]: Partial parsing: updated file: estudos_dbt://models/football/staging/sources.yml
+[0m12:04:19.836514 [debug] [MainThread]: Partial parsing: updated file: estudos_dbt://tests/assert_valid_season.sql
+[0m12:04:20.712813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '404e970d-4919-4259-bc9b-a668fae66797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8e053340>]}
+[0m12:04:20.726488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '404e970d-4919-4259-bc9b-a668fae66797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8f0b96a0>]}
+[0m12:04:20.727143 [info ] [MainThread]: Found 3 models, 4 tests, 2 sources, 0 exposures, 0 metrics, 447 macros, 0 groups, 0 semantic models
+[0m12:04:20.727758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '404e970d-4919-4259-bc9b-a668fae66797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8f5f2af0>]}
+[0m12:04:20.729556 [info ] [MainThread]: 
+[0m12:04:20.730665 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:04:20.732238 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_estudos-dbt-e-bigquery_dbt_football'
+[0m12:04:20.733129 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:04:21.564240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '404e970d-4919-4259-bc9b-a668fae66797', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8e5dfcd0>]}
+[0m12:04:21.565459 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:04:21.566388 [info ] [MainThread]: 
+[0m12:04:21.570288 [debug] [Thread-1  ]: Began running node test.estudos_dbt.assert_valid_season
+[0m12:04:21.570992 [debug] [Thread-2  ]: Began running node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:04:21.572073 [debug] [Thread-3  ]: Began running node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:04:21.574310 [debug] [Thread-4  ]: Began running node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:04:21.573230 [info ] [Thread-1  ]: 1 of 4 START test assert_valid_season .......................................... [RUN]
+[0m12:04:21.579200 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_estudos-dbt-e-bigquery_dbt_football, now test.estudos_dbt.assert_valid_season)
+[0m12:04:21.576440 [info ] [Thread-3  ]: 3 of 4 START test not_null_stg_football_matches_team2 .......................... [RUN]
+[0m12:04:21.575664 [info ] [Thread-2  ]: 2 of 4 START test not_null_stg_football_matches_team1 .......................... [RUN]
+[0m12:04:21.577461 [info ] [Thread-4  ]: 4 of 4 START test source_not_null_spi_spi_matches_latest_league ................ [RUN]
+[0m12:04:21.580939 [debug] [Thread-1  ]: Began compiling node test.estudos_dbt.assert_valid_season
+[0m12:04:21.583528 [debug] [Thread-3  ]: Acquiring new bigquery connection 'test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae'
+[0m12:04:21.585408 [debug] [Thread-2  ]: Acquiring new bigquery connection 'test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53'
+[0m12:04:21.586962 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6'
+[0m12:04:21.598377 [debug] [Thread-3  ]: Began compiling node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:04:21.602653 [debug] [Thread-1  ]: Writing injected SQL for node "test.estudos_dbt.assert_valid_season"
+[0m12:04:21.603350 [debug] [Thread-2  ]: Began compiling node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:04:21.603929 [debug] [Thread-4  ]: Began compiling node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:04:21.616083 [debug] [Thread-1  ]: Timing info for test.estudos_dbt.assert_valid_season (compile): 12:04:21.587382 => 12:04:21.615590
+[0m12:04:21.642601 [debug] [Thread-1  ]: Began executing node test.estudos_dbt.assert_valid_season
+[0m12:04:21.651601 [debug] [Thread-2  ]: Writing injected SQL for node "test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53"
+[0m12:04:21.656031 [debug] [Thread-3  ]: Writing injected SQL for node "test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae"
+[0m12:04:21.660593 [debug] [Thread-4  ]: Writing injected SQL for node "test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6"
+[0m12:04:21.684416 [debug] [Thread-1  ]: Writing runtime sql for node "test.estudos_dbt.assert_valid_season"
+[0m12:04:21.685288 [debug] [Thread-2  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53 (compile): 12:04:21.610447 => 12:04:21.684911
+[0m12:04:21.686370 [debug] [Thread-4  ]: Timing info for test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6 (compile): 12:04:21.626602 => 12:04:21.685963
+[0m12:04:21.687092 [debug] [Thread-2  ]: Began executing node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:04:21.687996 [debug] [Thread-3  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae (compile): 12:04:21.604322 => 12:04:21.687439
+[0m12:04:21.688834 [debug] [Thread-4  ]: Began executing node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:04:21.693122 [debug] [Thread-2  ]: Writing runtime sql for node "test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53"
+[0m12:04:21.693855 [debug] [Thread-3  ]: Began executing node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:04:21.694473 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:04:21.697662 [debug] [Thread-4  ]: Writing runtime sql for node "test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6"
+[0m12:04:21.703021 [debug] [Thread-3  ]: Writing runtime sql for node "test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae"
+[0m12:04:21.704444 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m12:04:21.705715 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m12:04:21.706809 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m12:04:21.783165 [debug] [Thread-1  ]: On test.estudos_dbt.assert_valid_season: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.assert_valid_season"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      with matches as (
+    select * from `estudos-dbt-e-bigquery`.`dbt_football`.`stg_football_matches`
+)
+
+select *
+from matches
+where season not in (
+    2019,
+    2021,
+    2022
+)
+      
+    ) dbt_internal_test
+[0m12:04:21.786364 [debug] [Thread-2  ]: On test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select team1
+from `estudos-dbt-e-bigquery`.`dbt_football`.`stg_football_matches`
+where team1 is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:04:21.788303 [debug] [Thread-4  ]: On test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select league
+from `estudos-dbt-e-bigquery`.`football`.`spi_matches_latest`
+where league is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:04:21.790411 [debug] [Thread-3  ]: On test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select team2
+from `estudos-dbt-e-bigquery`.`dbt_football`.`stg_football_matches`
+where team2 is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:04:23.720008 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:8caaf365-8989-44cd-a9dc-ecfaa8bf1b59&page=queryresults
+[0m12:04:23.722665 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:97142077-074d-40f8-9b18-8c5ae707549b&page=queryresults
+[0m12:04:23.723992 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:9cbb080c-1546-481e-8e75-9f206a8f8786&page=queryresults
+[0m12:04:23.725361 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:44d304dc-bc09-4669-b75c-465422f70790&page=queryresults
+[0m12:04:24.635030 [debug] [Thread-4  ]: Timing info for test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6 (execute): 12:04:21.694839 => 12:04:24.634609
+[0m12:04:24.636623 [debug] [Thread-1  ]: Timing info for test.estudos_dbt.assert_valid_season (execute): 12:04:21.661103 => 12:04:24.636193
+[0m12:04:24.638630 [debug] [Thread-3  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae (execute): 12:04:21.698315 => 12:04:24.637910
+[0m12:04:24.640119 [info ] [Thread-4  ]: 4 of 4 PASS source_not_null_spi_spi_matches_latest_league ...................... [[32mPASS[0m in 3.05s]
+[0m12:04:24.642201 [info ] [Thread-1  ]: 1 of 4 PASS assert_valid_season ................................................ [[32mPASS[0m in 3.06s]
+[0m12:04:24.644179 [info ] [Thread-3  ]: 3 of 4 PASS not_null_stg_football_matches_team2 ................................ [[32mPASS[0m in 3.06s]
+[0m12:04:24.645526 [debug] [Thread-4  ]: Finished running node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:04:24.647286 [debug] [Thread-2  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53 (execute): 12:04:21.689252 => 12:04:24.646763
+[0m12:04:24.648592 [debug] [Thread-1  ]: Finished running node test.estudos_dbt.assert_valid_season
+[0m12:04:24.650464 [debug] [Thread-3  ]: Finished running node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:04:24.653134 [info ] [Thread-2  ]: 2 of 4 PASS not_null_stg_football_matches_team1 ................................ [[32mPASS[0m in 3.07s]
+[0m12:04:24.655198 [debug] [Thread-2  ]: Finished running node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:04:24.658384 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:04:24.659046 [debug] [MainThread]: Connection 'test.estudos_dbt.assert_valid_season' was properly closed.
+[0m12:04:24.659948 [debug] [MainThread]: Connection 'test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae' was properly closed.
+[0m12:04:24.660540 [debug] [MainThread]: Connection 'test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53' was properly closed.
+[0m12:04:24.661374 [debug] [MainThread]: Connection 'test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6' was properly closed.
+[0m12:04:24.662102 [info ] [MainThread]: 
+[0m12:04:24.662825 [info ] [MainThread]: Finished running 4 tests in 0 hours 0 minutes and 3.93 seconds (3.93s).
+[0m12:04:24.665540 [debug] [MainThread]: Command end result
+[0m12:04:24.676560 [info ] [MainThread]: 
+[0m12:04:24.677310 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:04:24.677978 [info ] [MainThread]: 
+[0m12:04:24.679043 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m12:04:24.680157 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 6.363916, "process_user_time": 7.51122, "process_kernel_time": 0.909466, "process_mem_max_rss": "203808", "process_out_blocks": "2824", "process_in_blocks": "0"}
+[0m12:04:24.681492 [debug] [MainThread]: Command `dbt test` succeeded at 12:04:24.681135 after 6.37 seconds
+[0m12:04:24.682555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdea22dc4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8f4705b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8f505f10>]}
+[0m12:04:24.683441 [debug] [MainThread]: Flushing usage events
+[0m12:06:45.133880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f25537b9af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2551a99670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2551a99e20>]}
+
+
+============================== 12:06:45.136997 | 2a3ef1d4-7621-491b-bb46-4fa382895762 ==============================
+[0m12:06:45.136997 [info ] [MainThread]: Running with dbt=1.7.4
+[0m12:06:45.137828 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/pedromarques/Documentos/GitHub/estudos-dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/pedromarques/Documentos/GitHub/estudos-dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m12:06:46.304839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2a3ef1d4-7621-491b-bb46-4fa382895762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2551ad4400>]}
+[0m12:06:46.496599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2a3ef1d4-7621-491b-bb46-4fa382895762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f25408fbd90>]}
+[0m12:06:46.497532 [info ] [MainThread]: Registered adapter: bigquery=1.7.2
+[0m12:06:46.508620 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m12:06:46.562629 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m12:06:46.563390 [debug] [MainThread]: Partial parsing: added file: estudos_dbt://tests/assert_source_diff_teams.sql
+[0m12:06:46.749487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a3ef1d4-7621-491b-bb46-4fa382895762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f25400b6b80>]}
+[0m12:06:46.764178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a3ef1d4-7621-491b-bb46-4fa382895762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2540132fd0>]}
+[0m12:06:46.764846 [info ] [MainThread]: Found 3 models, 5 tests, 2 sources, 0 exposures, 0 metrics, 447 macros, 0 groups, 0 semantic models
+[0m12:06:46.765435 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a3ef1d4-7621-491b-bb46-4fa382895762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f25400d2310>]}
+[0m12:06:46.767356 [info ] [MainThread]: 
+[0m12:06:46.768399 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:06:46.769996 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_estudos-dbt-e-bigquery_dbt_football'
+[0m12:06:46.771134 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:06:47.590354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a3ef1d4-7621-491b-bb46-4fa382895762', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2540121dc0>]}
+[0m12:06:47.592497 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:06:47.593119 [info ] [MainThread]: 
+[0m12:06:47.596011 [debug] [Thread-1  ]: Began running node test.estudos_dbt.assert_source_diff_teams
+[0m12:06:47.596626 [info ] [Thread-1  ]: 1 of 5 START test assert_source_diff_teams ..................................... [RUN]
+[0m12:06:47.597392 [debug] [Thread-2  ]: Began running node test.estudos_dbt.assert_valid_season
+[0m12:06:47.598730 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_estudos-dbt-e-bigquery_dbt_football, now test.estudos_dbt.assert_source_diff_teams)
+[0m12:06:47.599748 [debug] [Thread-3  ]: Began running node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:06:47.600507 [debug] [Thread-4  ]: Began running node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:06:47.601272 [info ] [Thread-2  ]: 2 of 5 START test assert_valid_season .......................................... [RUN]
+[0m12:06:47.602477 [debug] [Thread-1  ]: Began compiling node test.estudos_dbt.assert_source_diff_teams
+[0m12:06:47.603589 [info ] [Thread-3  ]: 3 of 5 START test not_null_stg_football_matches_team1 .......................... [RUN]
+[0m12:06:47.604781 [info ] [Thread-4  ]: 4 of 5 START test not_null_stg_football_matches_team2 .......................... [RUN]
+[0m12:06:47.607498 [debug] [Thread-2  ]: Acquiring new bigquery connection 'test.estudos_dbt.assert_valid_season'
+[0m12:06:47.619796 [debug] [Thread-3  ]: Acquiring new bigquery connection 'test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53'
+[0m12:06:47.621016 [debug] [Thread-1  ]: Writing injected SQL for node "test.estudos_dbt.assert_source_diff_teams"
+[0m12:06:47.625025 [debug] [Thread-4  ]: Acquiring new bigquery connection 'test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae'
+[0m12:06:47.626582 [debug] [Thread-2  ]: Began compiling node test.estudos_dbt.assert_valid_season
+[0m12:06:47.628256 [debug] [Thread-3  ]: Began compiling node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:06:47.629919 [debug] [Thread-4  ]: Began compiling node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:06:47.634670 [debug] [Thread-2  ]: Writing injected SQL for node "test.estudos_dbt.assert_valid_season"
+[0m12:06:47.635686 [debug] [Thread-1  ]: Timing info for test.estudos_dbt.assert_source_diff_teams (compile): 12:06:47.608880 => 12:06:47.635141
+[0m12:06:47.666022 [debug] [Thread-1  ]: Began executing node test.estudos_dbt.assert_source_diff_teams
+[0m12:06:47.683021 [debug] [Thread-2  ]: Timing info for test.estudos_dbt.assert_valid_season (compile): 12:06:47.630600 => 12:06:47.682686
+[0m12:06:47.683985 [debug] [Thread-4  ]: Writing injected SQL for node "test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae"
+[0m12:06:47.682416 [debug] [Thread-3  ]: Writing injected SQL for node "test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53"
+[0m12:06:47.690734 [debug] [Thread-2  ]: Began executing node test.estudos_dbt.assert_valid_season
+[0m12:06:47.708713 [debug] [Thread-1  ]: Writing runtime sql for node "test.estudos_dbt.assert_source_diff_teams"
+[0m12:06:47.712345 [debug] [Thread-2  ]: Writing runtime sql for node "test.estudos_dbt.assert_valid_season"
+[0m12:06:47.713549 [debug] [Thread-4  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae (compile): 12:06:47.641467 => 12:06:47.712973
+[0m12:06:47.714882 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m12:06:47.715833 [debug] [Thread-3  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53 (compile): 12:06:47.636265 => 12:06:47.715508
+[0m12:06:47.716425 [debug] [Thread-4  ]: Began executing node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:06:47.717196 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m12:06:47.717860 [debug] [Thread-3  ]: Began executing node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:06:47.721518 [debug] [Thread-4  ]: Writing runtime sql for node "test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae"
+[0m12:06:47.727616 [debug] [Thread-3  ]: Writing runtime sql for node "test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53"
+[0m12:06:47.729170 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m12:06:47.730138 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m12:06:47.806110 [debug] [Thread-1  ]: On test.estudos_dbt.assert_source_diff_teams: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.assert_source_diff_teams"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      with matches as (
+    select * from `estudos-dbt-e-bigquery`.`football`.`spi_matches_latest`
+)
+
+select *
+from matches
+where team1 = team2
+      
+    ) dbt_internal_test
+[0m12:06:47.809376 [debug] [Thread-3  ]: On test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select team1
+from `estudos-dbt-e-bigquery`.`dbt_football`.`stg_football_matches`
+where team1 is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:06:47.810331 [debug] [Thread-4  ]: On test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select team2
+from `estudos-dbt-e-bigquery`.`dbt_football`.`stg_football_matches`
+where team2 is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:06:47.811824 [debug] [Thread-2  ]: On test.estudos_dbt.assert_valid_season: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.assert_valid_season"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      with matches as (
+    select * from `estudos-dbt-e-bigquery`.`dbt_football`.`stg_football_matches`
+)
+
+select *
+from matches
+where season not in (
+    2019,
+    2021,
+    2022
+)
+      
+    ) dbt_internal_test
+[0m12:06:49.003544 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:a6fca197-802d-4063-9cd7-dadad80b703a&page=queryresults
+[0m12:06:49.062731 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:d5bac9ff-9314-4e8a-8a39-ed147a285cce&page=queryresults
+[0m12:06:49.086908 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:daabe42a-cfe1-4929-82e0-21c933207d5a&page=queryresults
+[0m12:06:49.950881 [debug] [Thread-2  ]: Timing info for test.estudos_dbt.assert_valid_season (execute): 12:06:47.709375 => 12:06:49.949743
+[0m12:06:49.953941 [info ] [Thread-2  ]: 2 of 5 PASS assert_valid_season ................................................ [[32mPASS[0m in 2.35s]
+[0m12:06:49.955250 [debug] [Thread-2  ]: Finished running node test.estudos_dbt.assert_valid_season
+[0m12:06:49.955951 [debug] [Thread-2  ]: Began running node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:06:49.956538 [info ] [Thread-2  ]: 5 of 5 START test source_not_null_spi_spi_matches_latest_league ................ [RUN]
+[0m12:06:49.958093 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly test.estudos_dbt.assert_valid_season, now test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6)
+[0m12:06:49.960095 [debug] [Thread-4  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae (execute): 12:06:47.718526 => 12:06:49.959449
+[0m12:06:49.961263 [debug] [Thread-2  ]: Began compiling node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:06:49.962718 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:e59f2720-d699-49f2-b775-366b520200cf&page=queryresults
+[0m12:06:49.964850 [debug] [Thread-3  ]: Timing info for test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53 (execute): 12:06:47.722170 => 12:06:49.964251
+[0m12:06:49.966770 [info ] [Thread-4  ]: 4 of 5 PASS not_null_stg_football_matches_team2 ................................ [[32mPASS[0m in 2.34s]
+[0m12:06:49.980211 [debug] [Thread-2  ]: Writing injected SQL for node "test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6"
+[0m12:06:49.981627 [info ] [Thread-3  ]: 3 of 5 PASS not_null_stg_football_matches_team1 ................................ [[32mPASS[0m in 2.36s]
+[0m12:06:49.983597 [debug] [Thread-4  ]: Finished running node test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae
+[0m12:06:49.987292 [debug] [Thread-3  ]: Finished running node test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53
+[0m12:06:49.990247 [debug] [Thread-2  ]: Timing info for test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6 (compile): 12:06:49.967478 => 12:06:49.988429
+[0m12:06:49.992098 [debug] [Thread-2  ]: Began executing node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:06:50.088095 [debug] [Thread-2  ]: Writing runtime sql for node "test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6"
+[0m12:06:50.089197 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m12:06:50.134024 [debug] [Thread-2  ]: On test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "football", "target_name": "dev", "node_id": "test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select league
+from `estudos-dbt-e-bigquery`.`football`.`spi_matches_latest`
+where league is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:06:50.804138 [debug] [Thread-1  ]: Timing info for test.estudos_dbt.assert_source_diff_teams (execute): 12:06:47.672433 => 12:06:50.802928
+[0m12:06:50.807866 [info ] [Thread-1  ]: 1 of 5 PASS assert_source_diff_teams ........................................... [[32mPASS[0m in 3.21s]
+[0m12:06:50.810910 [debug] [Thread-1  ]: Finished running node test.estudos_dbt.assert_source_diff_teams
+[0m12:06:51.170479 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=estudos-dbt-e-bigquery&j=bq:US:fda2a493-7e33-46ff-8575-2b168619df0d&page=queryresults
+[0m12:06:52.298441 [debug] [Thread-2  ]: Timing info for test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6 (execute): 12:06:49.993219 => 12:06:52.297042
+[0m12:06:52.300232 [info ] [Thread-2  ]: 5 of 5 PASS source_not_null_spi_spi_matches_latest_league ...................... [[32mPASS[0m in 2.34s]
+[0m12:06:52.301232 [debug] [Thread-2  ]: Finished running node test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6
+[0m12:06:52.303215 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:06:52.303759 [debug] [MainThread]: Connection 'test.estudos_dbt.assert_source_diff_teams' was properly closed.
+[0m12:06:52.304215 [debug] [MainThread]: Connection 'test.estudos_dbt.source_not_null_spi_spi_matches_latest_league.15e25022b6' was properly closed.
+[0m12:06:52.304762 [debug] [MainThread]: Connection 'test.estudos_dbt.not_null_stg_football_matches_team1.ce4b914a53' was properly closed.
+[0m12:06:52.305324 [debug] [MainThread]: Connection 'test.estudos_dbt.not_null_stg_football_matches_team2.06d446a3ae' was properly closed.
+[0m12:06:52.305934 [info ] [MainThread]: 
+[0m12:06:52.306915 [info ] [MainThread]: Finished running 5 tests in 0 hours 0 minutes and 5.54 seconds (5.54s).
+[0m12:06:52.309723 [debug] [MainThread]: Command end result
+[0m12:06:52.327143 [info ] [MainThread]: 
+[0m12:06:52.327929 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:06:52.328659 [info ] [MainThread]: 
+[0m12:06:52.329635 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m12:06:52.331147 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 7.28176, "process_user_time": 6.65543, "process_kernel_time": 0.579261, "process_mem_max_rss": "194012", "process_out_blocks": "2896", "process_in_blocks": "0"}
+[0m12:06:52.332124 [debug] [MainThread]: Command `dbt test` succeeded at 12:06:52.331856 after 7.28 seconds
+[0m12:06:52.332982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f25537b9af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2540ca2f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f25408fbd90>]}
+[0m12:06:52.334396 [debug] [MainThread]: Flushing usage events

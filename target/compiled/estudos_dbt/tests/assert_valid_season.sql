@@ -5,6 +5,7 @@ with matches as (
 select *
 from matches
 where season not in (
-    -- 2019,
+    2019,
     2021,
-    2022)
+    2022
+)

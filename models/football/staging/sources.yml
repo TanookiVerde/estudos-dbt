@@ -9,3 +9,7 @@ sources:
         loaded_at_field: "CAST(date AS TIMESTAMP)"
         freshness:
           warn_after: {count: 24, period: hour}
+        columns:
+          - name: league
+            tests:
+              - not_null
