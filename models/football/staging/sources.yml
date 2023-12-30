@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: spi
+    schema: football
+    tables:
+      - name: spi_global_ranking
+      - name: spi_matches_latest
+        loaded_at_field: "CAST(date AS TIMESTAMP)"
+        freshness:
+          warn_after: {count: 24, period: hour}

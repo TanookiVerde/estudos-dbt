@@ -1,2 +1,2 @@
 SELECT * 
-FROM estudos-dbt-e-bigquery.football.spi_matches_latest
+FROM `estudos-dbt-e-bigquery`.`football`.`spi_matches_latest`
