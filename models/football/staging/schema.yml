@@ -3,6 +3,13 @@ version: 2
 models:
   - name: stg_football_matches
     description: D1
+    columns:
+      - name: team1
+        tests:
+          - not_null
+      - name: team2
+        tests:
+          - not_null
 
   - name: stg_football_rankings
     description: D2
